@@ -7,16 +7,16 @@ public class Main {
         System.out.println(result);  // This line should work fine
     }
 
-    static class A {
-        String meth() {
+    public static class A {
+        public String meth() {
             return "Invoking method from class A";
         }
     }
 
-    static class B extends A {
+    public static class B extends A {
         @Override
-        String meth() {
-            return "Method is overridden in Extended class B";
+        public String meth() {
+            return "Method is overridden in Extendend class B";
         }
     }
 
