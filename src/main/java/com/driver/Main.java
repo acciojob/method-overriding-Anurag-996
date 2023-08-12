@@ -7,3 +7,16 @@ public class Main {
         System.out.println(result);  // This line should work fine
     }
 }
+
+class A {
+    String meth() {
+        return "Invoking method from class A";
+    }
+}
+
+class B extends A {
+    @Override
+    String meth() {
+        return "Method is overridden in Extended class B";
+    }
+}
