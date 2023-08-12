@@ -6,17 +6,19 @@ public class Main {
         String result = obj.meth();
         System.out.println(result);  // This line should work fine
     }
+
+    static class A {
+        String meth() {
+            return "Invoking method from class A";
+        }
+    }
+
+    static class B extends A {
+        @Override
+        String meth() {
+            return "Method is overridden in Extended class B";
+        }
+    }
+
 }
 
-class A {
-    String meth() {
-        return "Invoking method from class A";
-    }
-}
-
-class B extends A {
-    @Override
-    String meth() {
-        return "Method is overridden in Extended class B";
-    }
-}
